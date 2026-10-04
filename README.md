@@ -31,3 +31,6 @@ Install dependency:
 
 ```bash
 npm install
+
+## GitHub
+https://github.com/revalina2428240105/tugas1-restful-2428240105
