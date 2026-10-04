@@ -34,3 +34,6 @@ npm install
 
 ## GitHub
 https://github.com/revalina2428240105/tugas1-restful-2428240105
+
+## Vercel
+https://tugas1-restful-2428240105.vercel.app/
