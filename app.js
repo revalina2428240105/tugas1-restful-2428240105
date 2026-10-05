@@ -89,7 +89,9 @@ app.post("/field-bookings", (req, res) => {
     }
 
     const baru = {
-        id: fieldBookings.length + 1,
+        id: fieldBookings.length > 0
+            ? Math.max(...fieldBookings.map((b) => b.id)) + 1
+        : 1,
         namaPemesan,
         lapangan,
         tanggal,
