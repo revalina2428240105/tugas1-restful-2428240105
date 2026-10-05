@@ -80,7 +80,14 @@ app.get("/field-bookings/:id", (req, res) => {
 app.post("/field-bookings", (req, res) => {
     const { namaPemesan, lapangan, tanggal, jamMulai, durasiJam } = req.body;
 
-    if (!namaPemesan || !lapangan || !tanggal || !jamMulai || durasiJam === undefined) {
+    if (
+        !namaPemesan ||
+        !lapangan ||
+        !tanggal ||
+        !jamMulai ||
+        durasiJam === undefined ||
+        typeof durasiJam !== "number"
+    )   {
         return res.status(400).json({
             status: "error",
             message: "Semua field wajib diisi",
@@ -123,7 +130,14 @@ app.put("/field-bookings/:id", (req, res) => {
 
     const { namaPemesan, lapangan, tanggal, jamMulai, durasiJam } = req.body;
 
-    if (!namaPemesan || !lapangan || !tanggal || !jamMulai || durasiJam === undefined) {
+    if (
+        !namaPemesan ||
+        !lapangan ||
+        !tanggal ||
+        !jamMulai ||
+        durasiJam === undefined ||
+        typeof durasiJam !== "number"
+    )   {
         return res.status(400).json({
             status: "error",
             message: "Semua field wajib diisi",
